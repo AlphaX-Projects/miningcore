@@ -2107,15 +2107,15 @@
         "name": "Monero",
         "symbol": "XMR",
         "family": "cryptonote",
-        "hash": "cryptonight",
+        "hash": "randomx",
         "hashVariant": 0,
         "smallestUnit": 1000000000000,
         "addressPrefix": 18,
         "addressPrefixTestnet": 53,
         "addressPrefixIntegrated": 19,
         "addressPrefixIntegratedTestnet": 54,
-        "explorerBlockLink": "https://chainradar.com/xmr/block/$height$",
-        "explorerTxLink": "https://chainradar.com/xmr/transaction/{0}"
+        "explorerBlockLink": "https://minergate.com/blockchain/xmr/block/$height$",
+        "explorerTxLink": "https://minergate.com/blockchain/xmr/transaction/{0}"
     },
     "bittube": {
         "name": "Bittube",
