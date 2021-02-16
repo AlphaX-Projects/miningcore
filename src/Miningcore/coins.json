@@ -698,7 +698,7 @@
         "explorerAccountLink": "http://explorer.hthcoin.world/address/{0}"
     },
     "indexchain": {
-        "name": "Indexchain",
+        "name": "IndexChain",
         "symbol": "IDX",
         "family": "bitcoin",
         "coinbaseHasher": {
@@ -803,6 +803,32 @@
         "explorerBlockLink": "https://chainz.cryptoid.info/lcc/block.dws?$height$.htm",
         "explorerTxLink": "https://chainz.cryptoid.info/lcc/tx.dws?{0}.htm",
         "explorerAccountLink": "https://chainz.cryptoid.info/lcc/address.dws?{0}.htm"
+    },
+    "luckybit": {
+        "name": "LuckyBit",
+        "symbol": "LUCKY",
+        "family": "bitcoin",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "neoscrypt",
+            "args": [ 0 ]
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "neoscrypt",
+                    "args": [ 0 ]
+                }
+            ]
+        },
+        "hasMasterNodes": true,
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "https://openchains.info/coin/luckybit/block/$hash$",
+        "explorerTxLink": "https://openchains.info/coin/luckybit/tx/{0}",
+        "explorerAccountLink": "https://openchains.info/coin/luckybit/address/{0}"
     },
     "monacoin": {
         "name": "Monacoin",
