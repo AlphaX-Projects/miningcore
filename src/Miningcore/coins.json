@@ -251,6 +251,24 @@
         "explorerTxLink": "http://explorer.btcd.io/#/TX?TX={0}",
         "explorerAccountLink": "http://explorer.btcd.io/#/address?address={0}"
     },
+    "bitcoinsv": {
+        "name": "BitcoinSV",
+        "symbol": "BSV",
+        "family": "bitcoin",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "sha256d"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [ { "hash": "sha256d" } ]
+        },
+        "explorerBlockLink": "https://bsv.tokenview.com/block/$height$",
+        "explorerTxLink": "https://bsv.tokenview.com/tx/{0}",
+        "explorerAccountLink": "https://bsv.tokenview.com/address/{0}"
+    },
     "browncoin": {
         "name": "Browncoin",
         "symbol": "BRWN",
@@ -331,7 +349,7 @@
             "hash": "reverse",
             "args": [ { "hash": "sha256d" } ]
         },
-        "hasCoinbasePayload" : true,
+        "hasCoinbasePayload": true,
         "explorerBlockLink": "https://devault.llama.network/block/$height$",
         "explorerTxLink": "https://devault.llama.network/tx/{0}",
         "explorerAccountLink": "https://devault.llama.network/address/{0}"
@@ -551,6 +569,31 @@
         "explorerTxLink": "https://explorer.fanaticoscriptos.com/tx/{0}",
         "explorerAccountLink": "https://explorer.fanaticoscriptos.com/address/{0}"
     },
+    "feathercoin": {
+        "name": "Feathercoin",
+        "symbol": "FTC",
+        "family": "bitcoin",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "neoscrypt",
+            "args": [ 0 ]
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "neoscrypt",
+                    "args": [ 0 ]
+                }
+            ]
+        },
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "https://chainz.cryptoid.info/ftc/block.dws?$height$.htm",
+        "explorerTxLink": "https://chainz.cryptoid.info/ftc/tx.dws?{0}.htm",
+        "explorerAccountLink": "https://chainz.cryptoid.info/ftc/address.dws?{0}.htm"
+    },
     "flo": {
         "name": "Florin",
         "symbol": "FLO",
@@ -596,7 +639,7 @@
          "hash": "reverse",
          "args": [ { "hash": "sha256d" } ]
          },
-        "hasCoinbaseDevReward":true,
+        "hasCoinbaseDevReward": true,
         "explorerBlockLink": "https://freecash.info/block?height=$height$",
         "explorerTxLink": "https://freecash.info/transaction?hash={0}",
         "explorerAccountLink": "https://freecash.info/address?address={0}"
@@ -620,8 +663,9 @@
         "explorerTxLink": "http://explorer.geekcash.org/tx/{0}",
         "explorerAccountLink": "http://explorer.geekcash.org/address/{0}"
     },
-    "globaltoken": {
-        "name": "Globaltoken",
+    "globaltoken-sha256": {
+        "name": "GLT-Sha256",
+        "canonicalName": "Globaltoken",
         "symbol": "GLT",
         "family": "bitcoin",
         "coinbaseHasher": {
@@ -635,9 +679,33 @@
             "args": [ { "hash": "sha256d" } ]
         },
         "hasMasterNodes": true,
-        "explorerBlockLink": "https://bchain.info/GLT/block/$height$",
-        "explorerTxLink": "https://bchain.info/GLT/tx/{0}",
-        "explorerAccountLink": "https://bchain.info/GLT/addr/{0}"
+        "hasTreasury": true,
+        "explorerBlockLink": "https://explorer.globaltoken.org/block/$hash$",
+        "explorerTxLink": "https://explorer.globaltoken.org/tx/{0}",
+        "explorerAccountLink": "https://explorer.globaltoken.org/address/{0}"
+    },
+    "globaltoken-scrypt": {
+        "name": "GLT-Scrypt",
+        "canonicalName": "Globaltoken",
+        "symbol": "GLT",
+        "family": "bitcoin",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "scrypt",
+            "args": [ 1024, 1 ]
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [ { "hash": "sha256d" } ]
+        },
+        "hasMasterNodes": true,
+        "hasTreasury": true,
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "https://explorer.globaltoken.org/block/$hash$",
+        "explorerTxLink": "https://explorer.globaltoken.org/tx/{0}",
+        "explorerAccountLink": "https://explorer.globaltoken.org/address/{0}"
     },
     "goldcash": {
         "name": "Gold Cash",
@@ -1010,6 +1078,36 @@
         "explorerTxLink": "http://explorer.pigeoncoin.org/tx/{0}",
         "explorerAccountLink": "http://explorer.pigeoncoin.org/address/{0}"
     },
+    "profithunters": {
+        "name": "Profit Hunters",
+        "symbol": "PHC",
+        "family": "bitcoin",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "scrypt",
+            "args": [ 1024, 1 ]
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [ { "hash": "sha256d" } ]
+        },
+        "posBlockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "scrypt",
+                    "args": [ 1024, 1 ]
+                }
+            ]
+        },
+        "hasMasterNodes": true,
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "https://explorer.miningpower.net/index.php?block_hash=$hash$",
+        "explorerTxLink": "https://explorer.miningpower.net/index.php?transaction={0}",
+        "explorerAccountLink": "https://explorer.miningpower.net/index.php?wallet={0}"
+    },
     "pyrk-sha256": {
         "name": "Pyrk-Sha256",
         "canonicalName": "Pyrk",
@@ -1055,8 +1153,8 @@
                 }
             ]
         },
-        "shareMultiplier": 65536,
         "hasMasterNodes": true,
+        "shareMultiplier": 65536,
         "explorerBlockLink": "https://explorer.pyrk.org/blockheight/$height$",
         "explorerTxLink": "https://explorer.pyrk.org/tx/{0}",
         "explorerAccountLink": "https://explorer.pyrk.org/address/{0}"
@@ -1180,7 +1278,7 @@
         "explorerAccountLink": "https://chainz.cryptoid.info/spk/address.dws?{0}.htm"
     },
     "sugarchain": {
-        "name": "Sugarchain",
+        "name": "SugarChain",
         "symbol": "SUGAR",
         "family": "bitcoin",
         "coinbaseHasher": {
@@ -1193,7 +1291,7 @@
             "hash": "reverse",
             "args": [ { "hash": "sha256d" } ]
         },
-        "shareMultipler":4194304,
+        "shareMultiplier": 4194304,
         "explorerBlockLink": "https://1explorer.sugarchain.org/block/$hash$",
         "explorerTxLink": "https://1explorer.sugarchain.org/tx/{0}",
         "explorerAccountLink": "https://1explorer.sugarchain.org/address/{0}"
@@ -1216,6 +1314,44 @@
         "explorerBlockLink": "http://explorer.swippcoin.com/block/$height$",
         "explorerTxLink": "http://explorer.swippcoin.com/tx/{0}",
         "explorerAccountLink": "http://explorer.swippcoin.com/address/{0}"
+    },
+    "terracoin": {
+        "name": "Terracoin",
+        "canonicalName": "Auroracoin",
+        "symbol": "TRC",
+        "family": "bitcoin",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "sha256d"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [ { "hash": "sha256d" } ]
+        },
+        "explorerBlockLink": "http://insight.terracoin.io/block/$hash$",
+        "explorerTxLink": "http://insight.terracoin.io/tx/{0}",
+        "explorerAccountLink": "http://insight.terracoin.io/address/{0}"
+    },
+    "tidecoin": {
+        "name": "Tidecoin",
+        "symbol": "TDC",
+        "family": "bitcoin",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "yespower_tide"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [ { "hash": "sha256d" } ]
+        },
+        "shareMultiplier": 3145728,
+        "explorerBlockLink": "http://explorer.tidecoin.org/block/$hash$",
+        "explorerTxLink": "http://explorer.tidecoin.org/tx/{0}",
+        "explorerAccountLink": "http://explorer.tidecoin.org/address/{0}"
     },
     "titcoin": {
        "name": "Titcoin",
@@ -2133,15 +2269,15 @@
         "name": "Monero",
         "symbol": "XMR",
         "family": "cryptonote",
-        "hash": "randomx",
+        "hash": "cryptonight",
         "hashVariant": 0,
         "smallestUnit": 1000000000000,
         "addressPrefix": 18,
         "addressPrefixTestnet": 53,
         "addressPrefixIntegrated": 19,
         "addressPrefixIntegratedTestnet": 54,
-        "explorerBlockLink": "https://minergate.com/blockchain/xmr/block/$height$",
-        "explorerTxLink": "https://minergate.com/blockchain/xmr/transaction/{0}"
+        "explorerBlockLink": "https://chainradar.com/xmr/block/$height$",
+        "explorerTxLink": "https://chainradar.com/xmr/transaction/{0}"
     },
     "bittube": {
         "name": "Bittube",
